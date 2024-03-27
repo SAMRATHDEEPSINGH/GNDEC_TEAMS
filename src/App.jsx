@@ -1,4 +1,4 @@
-import Login from "./components/Login"
+import Login from "./components/Login/Login"
 import image3 from './images/03.jpg';
 
 
