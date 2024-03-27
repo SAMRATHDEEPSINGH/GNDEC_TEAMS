@@ -5,9 +5,9 @@ import people from '../../assets/people.png'
 
 function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
-  const [Msg,setMsg]=useState(false);
+  const [Msg, setMsg] = useState(false);
 
-  const toggleMsg=()=>{
+  const toggleMsg = () => {
     setMsg(!Msg);
   }
   const toggleDropdown1 = () => {
@@ -125,39 +125,42 @@ function Dashboard() {
         <div className='h-[75%] w-full overflow-y-auto scrollbar-webkit shadow-lg'>
           <div className='p-14'>
             <div className='max-w-[40%] bg-blue-50 rounded-b-xl rounded-tr-xl p-4 text-sm mb-6'>
+              <img src={man} alt="Avatar" className="w-8 h-8 rounded-full mr-2" />
+              {/* User's name */}
+              <span className="font-semibold">John Doe</span>
               <div>
-            <button className="top-0 right-0 flex items-center focus:outline-none ml-auto" type='button'
-            onClick={toggleMsg}>
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-chevron-down" width="15" height="15" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M15 11l-3 3l-3 -3" />
-                <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18z" />
-              </svg>
-              </button>
+                <button className="top-0 right-0 flex items-center focus:outline-none ml-auto" type='button'
+                  onClick={toggleMsg}>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-chevron-down" width="15" height="15" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M15 11l-3 3l-3 -3" />
+                    <path d="M12 3a9 9 0 1 0 0 18a9 9 0 0 0 0 -18z" />
+                  </svg>
+                </button>
               </div>
               {Msg && (
-              <div className="right-0 top-full mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-10 ml-auto">
-                <ul className="py-1">
-                  <li>
-                    <button
-                      onClick={() => handleItemClick('Edit')}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-                    >
-                      Edit Message
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      onClick={() => handleItemClick('Delete')}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
-                    >
-                      Delete Message
-                    </button>
-                  </li>
-                  {/* Add more items as needed */}
-                </ul>
-              </div>
-            )}
+                <div className="right-0 top-full mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-10 ml-auto">
+                  <ul className="py-1">
+                    <li>
+                      <button
+                        onClick={() => handleItemClick('Edit')}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                      >
+                        Edit Message
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => handleItemClick('Delete')}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left"
+                      >
+                        Delete Message
+                      </button>
+                    </li>
+                    {/* Add more items as needed */}
+                  </ul>
+                </div>
+              )}
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, vitae. lorem50
               <div className="text-xs text-gray-400 responive right-2 bottom-2">
                 {new Date().toLocaleString()} {/* Display current date and time */}
